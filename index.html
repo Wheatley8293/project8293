@@ -4,26 +4,17 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<link rel="icon" href="favicon.ico">
 		<title>따닥 !! - 클릭하고 퇴근하자 ! </title>
-		<!-- Bootstrap core CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<!-- Custom styles for this template -->
 		<link href="css/owl.carousel.css" rel="stylesheet">
 		<link href="css/owl.theme.default.min.css"  rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
-		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		<link href="css/upload.css" rel="stylesheet">
 		<script src="js/ie-emulation-modes-warning.js"></script>
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
 	</head>
 	<body id="page-top">
 		<!-- Navigation -->
@@ -455,36 +446,37 @@
 						<p>서울특별시 강남구 영동대로76길 12 <br> 동원빌딩 5F</p>
 						<p><i class="fa fa-phone"></i> +070-8648-1595</p>
 					</div>
+					<hr>
 					<div class="col-md-6">
 						<form name="sentMessage" id="contactForm" novalidate="">
 							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<input type="text" class="form-control" readonly placeholder="파일 첨부 후, 전송버튼을 눌러주세요!" id="name" required="" data-validation-required-message="파일형식 : 견적서.png">
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<input type="email" class="form-control" readonly placeholder="파일형식 : 견적서.png" id="email" required="" data-validation-required-message="파일 첨부 후, 전송버튼을 눌러주세요!">
-										<p class="help-block text-danger"></p>
-									</div>
-								</div>
-							</div>
-							<div class="row">
 								<div class="col-md-12">
-									<div class="form-group">
-										<textarea class="form-control" readonly placeholder="이곳에 파일을 끌어다 놓아주세요!" id="message" required="" data-validation-required-message="이곳에 파일을 끌어다 놓아주세요!"></textarea>
-										<p class="help-block text-danger"></p>
+									<div id="root1">
+										<div class="contents">
+										  <div class="upload-box">
+											<div id="drop-file" class="drag-file">
+											  <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘" class="image">
+											  <p class="message">보낼 파일을 여기에 <br>끌어다 놓아주세요!</p>
+											</div>
+											<label class="file-label" for="chooseFile">파일 첨부</label>
+											<label class="file-label">전송 버튼</label>
+											<!-- 핵심 -->
+											<input class="file" id="chooseFile" type="file" multiple onchange="dropFile.handleFiles(this.files)">
+										  </div>
+										  <div id="files" class="files">
+											<div class="file">
+											</div>
+										  </div>
+										</div>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 							</div>
+							<hr>
 							<div class="row">
 								<div class="col-lg-12 text-center">
-									<!-- <div id="success"></div> -->
-									<button type="button" class="btn">파일 첨부</button>
-									<button type="button" class="btn">전송 버튼</button>
+									<label>분류 결과 : </label>
+									<!-- 핵심 -->
 								</div>
 							</div>
 						</form>
