@@ -458,15 +458,14 @@
 											  <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘" class="image">
 											  <p class="message">보낼 파일을 여기에 <br>끌어다 놓아주세요!</p>
 											</div>
-											<label class="file-label" for="chooseFile">파일 첨부</label>
-											<label class="file-label">전송 버튼</label>
-											<!-- 핵심 -->
-											<input class="file" id="chooseFile" type="file" multiple onchange="dropFile.handleFiles(this.files)">
+											<label class="file-label" for="file">파일 첨부</label>
+											<input class="file" id="file" type="file" multiple onchange="dropFile.handleFiles(this.files)">
 										  </div>
 										  <div id="files" class="files">
 											<div class="file">
 											</div>
 										  </div>
+										  <!-- 첨부된 파일을 나타내는 div다. -->
 										</div>
 									</div>
 								</div>
@@ -475,7 +474,7 @@
 							<hr>
 							<div class="row">
 								<div class="col-lg-12 text-center">
-									<label>분류 결과 : </label>
+									<label id="omega">분류 결과 : </label>
 									<!-- 핵심 -->
 								</div>
 							</div>
@@ -614,5 +613,6 @@
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<script src="js/ie10-viewport-bug-workaround.js"></script>
 		<script src="js/scripts.js"></script>
+		<script src="js/sendfile.js"></script>
 	</body>
 </html>
